@@ -485,7 +485,7 @@ int main() {
 
     std::unordered_map<Vertex, size_t> componentNumbers;
 
-    size_t componentCount = graph::BFSConnectedComponents(g, &componentNumbers)(); // 2
+    size_t componentCount = graph::BFSConnectedComponents(g, &componentNumbers)();
 
     assert(componentCount == 2);
 
