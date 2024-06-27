@@ -522,7 +522,8 @@ int main() {
 
     std::unordered_map<Vertex, Vertex> representativeVertices;
 
-    size_t componentCount = graph::DisjointSetsConnectedComponents(g, &representativeVertices)();
+    size_t componentCount =
+        graph::DisjointSetsConnectedComponents(g, &representativeVertices)();
 
     assert(componentCount == 2);
 
