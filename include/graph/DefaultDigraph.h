@@ -10,6 +10,7 @@
 
 #include "graph/detail/ArrowProxy.h"
 #include "graph/detail/CompressedPair.h"
+#include "graph/detail/hash.h"
 #include "graph/detail/MapKeyIterator.h"
 #include "graph/Empty.h"
 #include "graph/GeneralizedMaps.h"
@@ -286,8 +287,6 @@ private:
 template <typename Vertex, typename VertexProps, typename EdgeProps>
 struct std::hash<graph::DefaultDigraphEdge<Vertex, VertexProps, EdgeProps>> {
     constexpr size_t operator()(graph::DefaultDigraphEdge<Vertex, VertexProps, EdgeProps> edge) const noexcept {
-        return
-            std::hash<decltype(edge.source_)>()(edge.source_) ^
-                (std::hash<decltype(&*edge.node_)>()(&*edge.node_) << 1);
+        return graph::detail::hashValues(edge.source_, &*edge.node_);
     }
 };
