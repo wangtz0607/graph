@@ -1,5 +1,6 @@
 #pragma once
 
+#include <compare>
 #include <limits>
 
 namespace graph {
@@ -17,5 +18,25 @@ struct Infinity {
         return kInfinity<T>;
     }
 };
+
+template <typename T>
+auto operator==(T lhs, Infinity rhs) {
+    return lhs == static_cast<T>(rhs);
+}
+
+template <typename T>
+auto operator==(Infinity lhs, T rhs) {
+    return static_cast<T>(lhs) == rhs;
+}
+
+template <typename T>
+auto operator<=>(T lhs, Infinity rhs) {
+    return lhs <=> static_cast<T>(rhs);
+}
+
+template <typename T>
+auto operator<=>(Infinity lhs, T rhs) {
+    return static_cast<T>(lhs) <=> rhs;
+}
 
 } // namespace graph
