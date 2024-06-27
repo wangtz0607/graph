@@ -15,6 +15,7 @@ C++20 header-only generic graph library.
 - `BellmanFordShortestPath`
 - `DFSConnectedComponents`
 - `BFSConnectedComponents`
+- `DisjointSetsConnectedComponents`
 - `TarjanCutVertices`
 - `TarjanBridges`
 - `TarjanStronglyConnectedComponents`
@@ -492,6 +493,42 @@ int main() {
     assert(componentNumbers[0] == componentNumbers[1]);
     assert(componentNumbers[2] != componentNumbers[0]);
     assert(componentNumbers[2] != componentNumbers[1]);
+
+    return 0;
+}
+```
+
+### `DisjointSetsConnectedComponents`
+
+```cpp
+#include <cassert>
+#include <cstddef>
+#include <unordered_map>
+
+#include "graph/DefaultDigraph.h"
+#include "graph/DisjointSetsConnectedComponents.h"
+
+int main() {
+    using Vertex = size_t;
+    using Graph = graph::DefaultDigraph<Vertex>;
+
+    Graph g;
+
+    g.addVertex(0);
+    g.addVertex(1);
+    g.addVertex(2);
+
+    g.addEdge(0, 1); g.addEdge(1, 0);
+
+    std::unordered_map<Vertex, Vertex> representativeVertices;
+
+    size_t componentCount = graph::DisjointSetsConnectedComponents(g, &representativeVertices)();
+
+    assert(componentCount == 2);
+
+    assert(representativeVertices[0] == representativeVertices[1]);
+    assert(representativeVertices[2] != representativeVertices[0]);
+    assert(representativeVertices[2] != representativeVertices[1]);
 
     return 0;
 }
