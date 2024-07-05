@@ -9,12 +9,12 @@
 namespace graph {
 
 template <typename Graph, typename Dists, typename Preds>
-class BFSShortestPath {
+class BFSShortestPaths {
     using Vertex = Graph::Vertex;
     using Edge = Graph::Edge;
 
 public:
-    BFSShortestPath(Graph &g, Vertex s, Dists dists, Preds preds)
+    BFSShortestPaths(Graph &g, Vertex s, Dists dists, Preds preds)
         : g_(g), s_(s), dists_(std::move(dists)), preds_(std::move(preds)) {}
     
     void operator()() {

@@ -10,13 +10,13 @@
 namespace graph {
 
 template <typename Graph, typename Weights, typename Dists, typename Preds>
-class DijkstraShortestPath {
+class DijkstraShortestPaths {
     using Vertex = Graph::Vertex;
     using Edge = Graph::Edge;
     using Weight = GeneralizedMapTraits<Weights>::Value;
 
 public:
-    DijkstraShortestPath(Graph &g, Vertex s, Weights weights, Dists dists, Preds preds)
+    DijkstraShortestPaths(Graph &g, Vertex s, Weights weights, Dists dists, Preds preds)
         : g_(g),
           s_(s),
           weights_(std::move(weights)),

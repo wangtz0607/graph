@@ -9,10 +9,10 @@ C++20 header-only generic graph library.
 - `KahnTopologicalSort`
 - `KruskalMinimumSpanningTree`
 - `PrimMinimumSpanningTree`
-- `BFSShortestPath`
-- `DAGShortestPath`
-- `DijkstraShortestPath`
-- `BellmanFordShortestPath`
+- `BFSShortestPaths`
+- `DAGShortestPaths`
+- `DijkstraShortestPaths`
+- `BellmanFordShortestPaths`
 - `DFSConnectedComponents`
 - `BFSConnectedComponents`
 - `DisjointSetsConnectedComponents`
@@ -232,7 +232,7 @@ int main() {
 }
 ```
 
-### `BFSShortestPath`
+### `BFSShortestPaths`
 
 ```cpp
 #include <cassert>
@@ -241,7 +241,7 @@ int main() {
 #include <unordered_map>
 
 #include "graph/DefaultDigraph.h"
-#include "graph/BFSShortestPath.h"
+#include "graph/BFSShortestPaths.h"
 
 int main() {
     using Vertex = size_t;
@@ -262,7 +262,7 @@ int main() {
     std::unordered_map<Vertex, size_t> dists;
     std::unordered_map<Vertex, std::optional<Vertex>> preds;
 
-    graph::BFSShortestPath(g, s, &dists, &preds)();
+    graph::BFSShortestPaths(g, s, &dists, &preds)();
 
     assert(dists[0] == 0);
     assert(dists[1] == 1);
@@ -276,7 +276,7 @@ int main() {
 }
 ```
 
-### `DAGShortestPath`
+### `DAGShortestPaths`
 
 ```cpp
 #include <cassert>
@@ -286,7 +286,7 @@ int main() {
 
 #include "graph/DefaultDigraph.h"
 #include "graph/Empty.h"
-#include "graph/DAGShortestPath.h"
+#include "graph/DAGShortestPaths.h"
 
 int main() {
     using Vertex = size_t;
@@ -312,7 +312,7 @@ int main() {
     std::unordered_map<Vertex, int> dists;
     std::unordered_map<Vertex, std::optional<Vertex>> preds;
 
-    graph::DAGShortestPath(g, s, g[&EdgeProps::weight], &dists, &preds)();
+    graph::DAGShortestPaths(g, s, g[&EdgeProps::weight], &dists, &preds)();
 
     assert(dists[0] == 0);
     assert(dists[1] == 10);
@@ -326,7 +326,7 @@ int main() {
 }
 ```
 
-### `DijkstraShortestPath`
+### `DijkstraShortestPaths`
 
 ```cpp
 #include <cassert>
@@ -336,7 +336,7 @@ int main() {
 
 #include "graph/DefaultDigraph.h"
 #include "graph/Empty.h"
-#include "graph/DijkstraShortestPath.h"
+#include "graph/DijkstraShortestPaths.h"
 
 int main() {
     using Vertex = size_t;
@@ -362,7 +362,7 @@ int main() {
     std::unordered_map<Vertex, int> dists;
     std::unordered_map<Vertex, std::optional<Vertex>> preds;
 
-    graph::DijkstraShortestPath(g, s, g[&EdgeProps::weight], &dists, &preds)();
+    graph::DijkstraShortestPaths(g, s, g[&EdgeProps::weight], &dists, &preds)();
 
     assert(dists[0] == 0);
     assert(dists[1] == 10);
@@ -376,7 +376,7 @@ int main() {
 }
 ```
 
-### `BellmanFordShortestPath`
+### `BellmanFordShortestPaths`
 
 ```cpp
 #include <cassert>
@@ -386,7 +386,7 @@ int main() {
 
 #include "graph/DefaultDigraph.h"
 #include "graph/Empty.h"
-#include "graph/BellmanFordShortestPath.h"
+#include "graph/BellmanFordShortestPaths.h"
 
 int main() {
     using Vertex = size_t;
@@ -412,7 +412,7 @@ int main() {
     std::unordered_map<Vertex, int> dists;
     std::unordered_map<Vertex, std::optional<Vertex>> preds;
 
-    graph::BellmanFordShortestPath(g, s, g[&EdgeProps::weight], &dists, &preds)();
+    graph::BellmanFordShortestPaths(g, s, g[&EdgeProps::weight], &dists, &preds)();
 
     assert(dists[0] == 0);
     assert(dists[1] == -10);
