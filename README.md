@@ -45,9 +45,8 @@ public:
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -87,9 +86,8 @@ public:
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -120,9 +118,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -158,9 +155,7 @@ int main() {
         int weight;
     };
 
-    using Graph = graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps>;
-
-    Graph g;
+    graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -203,9 +198,7 @@ int main() {
         int weight;
     };
 
-    using Graph = graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps>;
-
-    Graph g;
+    graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -245,9 +238,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -295,9 +287,7 @@ int main() {
         int weight;
     };
 
-    using Graph = graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps>;
-
-    Graph g;
+    graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -345,9 +335,7 @@ int main() {
         int weight;
     };
 
-    using Graph = graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps>;
-
-    Graph g;
+    graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -395,9 +383,7 @@ int main() {
         int weight;
     };
 
-    using Graph = graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps>;
-
-    Graph g;
+    graph::DefaultDigraph<Vertex, graph::Empty, EdgeProps> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -438,9 +424,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -474,9 +459,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -510,9 +494,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -547,9 +530,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -579,9 +561,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -616,9 +597,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -653,9 +633,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
@@ -679,9 +658,8 @@ int main() {
 
 int main() {
     using Vertex = size_t;
-    using Graph = graph::DefaultDigraph<Vertex>;
 
-    Graph g;
+    graph::DefaultDigraph<Vertex> g;
 
     g.addVertex(0);
     g.addVertex(1);
