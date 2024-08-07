@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.5.0)
 project(graph VERSION 0.1.0 LANGUAGES CXX)
 
 add_library(graph INTERFACE)
+target_compile_features(graph INTERFACE cxx_std_20)
 target_include_directories(graph INTERFACE
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
     "$<INSTALL_INTERFACE:include>"
