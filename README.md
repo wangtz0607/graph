@@ -1,7 +1,5 @@
 # Graph
 
-C++20 header-only generic graph library.
-
 ## Supported Algorithms
 
 - `DepthFirstSearch`
